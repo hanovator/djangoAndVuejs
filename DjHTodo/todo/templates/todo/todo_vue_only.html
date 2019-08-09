@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue-Django ToDo App</title>
+
+    <style>
+        body {
+            text-align: center;
+            background-color: #ddd;
+        }
+        .inputBox {
+            margin: auto;
+            width: 70%;
+            background: white;
+            height: 50px;
+            border-radius: 50px;
+            line-height: 50px;
+        }
+        .inputBox .name {
+            border-style: none;
+            border-bottom: 1px solid #ddd;
+            width: 70px;
+            padding-left: 20px;
+        }
+        .inputBox .item {
+            border-style: none;
+            border-bottom: 1px solid #ddd;
+            width: 400px;
+            margin-left: 50px;
+            padding-left: 20px;
+        }
+        .todoList {
+            list-style: none;
+            padding: 10px 0;
+            text-align: left;
+        }
+        .todoList li {
+            display: flex;
+            height: 50px;
+            line-height: 50px;
+            margin: 0.5rem 0;
+            padding: 0 0.9rem;
+            background: white;
+            border-radius: 5px;
+        }
+        .removeBtn {
+            margin-left: auto;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+
+        <h1>My Todo App !</h1>
+        <strong>서로 할 일이나 의견을 공유해 봅시다.</strong>
+        <br>
+
+        <div class="inputBox">
+            <input class="name" type="text" placeholder="name ..." v-model="name">
+            <input class="item" type="text" placeholder="type anything welcomed ..." v-model="newTodoItem" v-on:keyup.enter="add_tod">
+            <button v-on:click="add_tod">ADD</button>
+        </div>
+    
+        <ul class="todoList">
+            <li v-for="(todo, index) in todoItems">
+                <span>{ todo.name } :: { todo.item }</span>
+                <span class="removeBtn" v-on:click="remove_todo(index)">&#x00D7</span>
+            </li>
+        </ul>
+
+    </div>
+
+    <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+    <script>
+        var vm = new Vue({
+            delimiters : ['{', '}'],
+            el: '#app',
+            data: {
+                name: '',
+                newTodoItem: '',
+                todoItems:[
+                    {name: '한한주', item: '프로그램 만드는중'},
+                    {name: '한한주2', item: '프로그램 만드는중2'},
+                    {name: '한한주3', item: '프로그램 만드는중3'},
+                    {name: '한한주4', item: '프로그램 만드는중4'},
+                    {name: '한한주5', item: '프로그램 만드는중5'},
+                ],
+            },
+            methods: {
+                add_tod: function() {
+                    if(this.name == '') this.name = '익명자';
+                    if(this.newTodoItem == '') return;
+
+                    this.todoItems.push({name: this.name, item: this.newTodoItem});
+                    this.name='';
+                    this.newTodoItem='';
+                },
+                remove_todo: function(index) {
+                    this.todoItems.splice(index, 1);
+                }
+            },
+        })
+    </script>
+
+</body>
+</html>
