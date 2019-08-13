@@ -2,7 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a24d4305-eef7-43fb-9230-a4aad5097bd5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../VueDjTodo/mysite/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../VueDjTodo/static/img/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../VueDjTodo/static/img/lion.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../VueDjTodo/templates/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../VueDjTodo/templates/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../VueDjTodo/todo/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../VueDjTodo/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../VueDjTodo/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../VueDjTodo/mysite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../VueDjTodo/mysite/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../VueDjTodo/mysite/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../VueDjTodo/mysite/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../VueDjTodo/todo/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/../VueDjTodo/todo/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../VueDjTodo/todo/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../VueDjTodo/todo/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../VueDjTodo/todo/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../VueDjTodo/todo/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -104,7 +116,7 @@
       <option name="presentableId" value="Default" />
       <updated>1565246080800</updated>
       <workItem from="1565246082926" duration="6358000" />
-      <workItem from="1565309101219" duration="16827000" />
+      <workItem from="1565309101219" duration="21142000" />
     </task>
     <servers />
   </component>
